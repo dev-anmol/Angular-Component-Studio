@@ -15,3 +15,24 @@
   font-weight: 600;
   font-style: normal;
 }
+
+.geist-hero {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  /*font-weight: 500;*/
+  font-style: normal;
+}
+
+.geist-badge {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.geist-desc {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
