@@ -1,18 +1,35 @@
 <header>
+  <div class="flex flex-row items-center justify-between px-4 py-3 geist">
+    <div class="flex flex-row gap-[6px] text-sm font-normal hidden lg:block">
+      <a href="" class="">Docs</a>
+      <a href="" class="">Components</a>
+      <a href="" class="">Blocks</a>
+      <a href="" class="">Charts</a>
+      <a href="" class="">About</a>
+    </div>
 
-  <div class="flex flex-row justify-between px-4 py-3">
-    <div class="flex flex-row gap-10 text-sm font-semibold">
-      <a href="" class="">Docs</a>
-      <a href="" class="">Docs</a>
-      <a href="" class="">Docs</a>
-      <a href="" class="">Docs</a>
-      <a href="" class="">Docs</a>
+    <div class="lg:hidden flex gap-2 items-center">
+      <i-lucide [img]="MenuIcon" [size]="16" color="black" strokeWidth="2" class="my-icon cursor-pointer"></i-lucide>
+      <p class="text-md">Menu</p>
     </div>
 
     <div class="flex flex-row gap-10">
-      <input type="text" placeholder="Search documentation..." class="border border-neutral-200 focus:outline-neutral-300 p-1 rounded-md placeholder:text-sm placeholder:text-neutral-500"/>
-      <div></div>
-      <button class="text-xs px-6 rounded-lg py-1 bg-neutral-900 text-neutral-100">New Project</button>
+      <input type="text" placeholder="Search..."
+             class="border text-sm font-normal indent-3 hidden md:block border-neutral-300/90 focus:outline-neutral-300 p-[2px] rounded-md placeholder:text-sm placeholder:text-neutral-700 placeholder:font-normal"/>
+
+      <div>
+        <img
+          src="./assets/github/github-mark-white.png"
+          alt="GitHub logo"
+        />
+
+      </div>
+      <button
+        class="flex items-center gap-1 px-4 rounded-lg py-1 bg-neutral-800 hover:bg-neutral-900 transition-all duration-300 text-neutral-100 cursor-pointer">
+        <span class="text-sm hidden md:block">Talk to founders</span>
+        <span class="text-sm md:hidden">Talk</span>
+        <i-lucide [img]="ArrowRight" [size]="16" color="white" strokeWidth="1" class="my-icon"></i-lucide>
+      </button>
     </div>
 
   </div>
