@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import {LucideAngularModule, ArrowRight, LucideIconData, MenuIcon} from 'lucide-angular';
+import {Component, inject} from '@angular/core';
+import {ArrowRight, LucideAngularModule, LucideIconData, MenuIcon} from 'lucide-angular';
+import {ThemeToggle} from '../../services/toggle-mode/ThemeToggle';
 
 @Component({
   selector: 'app-header',
@@ -9,4 +10,8 @@ import {LucideAngularModule, ArrowRight, LucideIconData, MenuIcon} from 'lucide-
 export class Header {
   readonly ArrowRight: LucideIconData = ArrowRight;
   readonly MenuIcon: LucideIconData = MenuIcon;
+
+  public toggleService = inject(ThemeToggle);
+  mode = this.toggleService.mode;
+
 }

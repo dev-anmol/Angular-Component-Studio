@@ -2,10 +2,10 @@
 export default {
   darkMode: 'class',
   content: [
-    "./src/**/*.{html,ts}"
+    "./src/**/*.{html,ts}",
   ],
-  corePlugins: {
-    preflight: false
-  }
-};
-
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}

@@ -1,18 +1,35 @@
-import {Injectable, signal, WritableSignal} from '@angular/core';
+import {
+  Injectable,
+  signal,
+  effect,
+  inject,
+  runInInjectionContext,
+  afterNextRender,
+  Injector
+} from '@angular/core';
 import {Theme} from '../../types/theme';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable({providedIn: 'root'})
 export class ThemeToggle {
 
-  currentMode = signal<Theme>('night');
+  private injector = inject(Injector);
 
+  mode = signal<Theme>('light');
+
+  constructor() {
+    afterNextRender(() => {
+      runInInjectionContext(this.injector, () => {
+        effect(() => {
+          const isDark = this.mode() === 'dark';
+          document.documentElement.classList.toggle('dark', isDark);
+        });
+      });
+    });
+  }
 
   toggle() {
-    this.currentMode.update(theme =>
-      theme === 'day' ? 'night' : 'day'
-    )
+    this.mode.update(t =>
+      t === 'light' ? 'dark' : 'light'
+    );
   }
 }
-
