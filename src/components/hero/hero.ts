@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {ArrowRight, LucideAngularModule} from 'lucide-angular';
 
 @Component({
@@ -9,6 +9,5 @@ import {ArrowRight, LucideAngularModule} from 'lucide-angular';
   templateUrl: './hero.html',
 })
 export class Hero {
-
   protected readonly ArrowRight = ArrowRight;
 }

@@ -1,0 +1,49 @@
+<section class="mt-18 flex-1 space-y-6">
+  <!--  select features - examples, Dashboard, Tasks and Auth -->
+  <div class="geist-hero hidden md:flex md:items-center md:justify-between p-4">
+    <div class="flex-1 space-x-4">
+      <a href="">Examples</a>
+      <a href="">Dashboard</a>
+      <a href="">Tasks</a>
+      <a href="">Playground</a>
+      <a href="">Authentication</a>
+    </div>
+    <div>
+      <!--      select theme-->
+      <button class="geist-hero text-sm">
+        <span class="">Theme:</span>
+        <span>Neutral</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="relative md:hidden overflow-hidden rounded-xl">
+    <div class="relative">
+      @if (this.mode() === 'dark') {
+        <img
+          decoding="async"
+          src="/toggle/dashboard-dark.png"
+          alt="hero-section-dark-image"
+          class="
+          w-full
+          scale-100
+          object-cover
+        "
+        />
+      }
+
+      @if (this.mode() === 'light') {
+        <img
+          decoding="async"
+          src="/toggle/dashboard-light.png"
+          alt="hero-section-light-image"
+          class="
+          w-full
+          scale-100
+          object-cover
+        "
+        />
+      }
+    </div>
+  </div>
+</section>

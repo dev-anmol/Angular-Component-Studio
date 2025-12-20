@@ -1,11 +1,12 @@
 import {Component} from '@angular/core';
 import {Header} from '../../components/header/header';
 import {Hero} from '../../components/hero/hero'
+import {Product} from '../../components/product/product';
 
 @Component({
   selector: 'app-landing-page',
   imports: [
-    Header, Hero
+    Header, Hero, Product
   ],
   templateUrl: './landing-page.html',
 })
