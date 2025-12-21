@@ -1,42 +1,139 @@
 <section class="geist-product px-8 antialiased  max-w-sm ">
   <form action="">
-    <div class="w-full flex flex-col gap-6 rounded-lg border border-neutral-400/40 p-6">
+
+
+    <div class="flex flex-col gap-4 rounded-lg border border-neutral-400/40">
       <fieldset>
-        <legend class="text-md font-semibold">Payment Method</legend>
-        <p class="text-sm font-normal leading-normal mt-1 text-neutral-500/90 dark:text-neutral-400">All transactions are secure and
-          encrypted</p>
+        <div class="w-full flex flex-col gap-6 p-6">
+          <div>
+            <legend class="text-md font-semibold">Payment Method</legend>
+            <p class="text-sm text-wrap font-normal leading-normal mt-1 text-neutral-500/90 dark:text-neutral-400">All
+              transactions
+              are secure and
+              encrypted</p>
+
+          </div>
+
+
+          <div class="flex flex-col gap-3">
+            <label for="card-name" class="text-[14px] font-semibold">Name on Card</label>
+            <input type="text"
+                   id="card-name"
+                   placeholder="Anmol Thakur"
+                   class="
+                focus:outline-gray-500 focus:shadow-xs text base
+                border border-neutral-400/40 h-9 w-full min-w-0 font-normal
+                indent-1 hidden md:block px-3 py-1 rounded-lg placeholder:text-sm
+             dark:bg-[#1C1C1C] dark:placeholder:text-neutral-400 placeholder:font-normal"
+            />
+          </div>
+
+          <div class="grid grid-cols-3 gap-4">
+            <div class="flex flex-col flex-1 col-span-2 gap-3">
+              <div class="flex flex-col flex-1 gap-3">
+                <label for="card-number" class="text-[14px] font-semibold">Card Number</label>
+                <input type="text"
+                       id="card-number"
+                       placeholder="1234 5678 9012 3456"
+                       class="focus:outline-gray-500 focus:shadow-xs  border border-neutral-400/40 h-9 w-full min-w-0 text-sm font-norma indent-1 hidden md:block px-3 py-1 rounded-lg placeholder:text-sm dark:bg-[#1C1C1C] dark:placeholder:text-neutral-100 placeholder:font-normal"/>
+              </div>
+              <p class="text-sm text-wrap text-neutral-500/90 dark:text-neutral-400 leading-normal font-normal">Enter
+                your
+                16-digit
+                number.</p>
+            </div>
+
+            <div class="col-span-1 flex flex-col gap-3">
+              <label for="card-cvv" class="text-[14px] font-semibold">CVV</label>
+              <input type="text"
+                     id="card-cvv"
+                     placeholder="123"
+                     class="focus:outline-gray-500 focus:shadow-xs border border-neutral-400/40 h-9 w-full min-w-0 text-sm font-normal indent-1 hidden md:block px-3 py-1 rounded-lg placeholder:text-sm dark:bg-[#1C1C1C] dark:placeholder:text-neutral-100 placeholder:font-normal"/>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="col-span-1 flex flex-col gap-3">
+              <label class="text-[14px] font-semibold">Month</label>
+              <button
+                class="flex items-center justify-between border border-neutral-400/40 rounded-lg px-4 py-2 dark:bg-[#181818] text-sm">
+                <span>MM</span>
+                <!--            below icon-->
+                <i-lucide [img]="ChevronDown" [size]="16" strokeWidth="2"
+                          class="my-icon cursor-pointer pointer-events-none"></i-lucide>
+              </button>
+            </div>
+
+            <div class="col-span-1 flex flex-col gap-3">
+              <label class="text-[14px] font-semibold">Year</label>
+              <button
+                class="flex items-center justify-between border border-neutral-400/40 rounded-lg px-4 py-2 dark:bg-[#181818] text-sm">
+                <span>Year</span>
+                <!--            below icon-->
+                <i-lucide [img]="ChevronDown" [size]="16" strokeWidth="2"
+                          class="my-icon cursor-pointer pointer-events-none"></i-lucide>
+              </button>
+            </div>
+          </div>
+        </div>
       </fieldset>
 
-
-      <div class="flex flex-col gap-3">
-        <label for="card-name" class="text-[14px] font-semibold">Name on Card</label>
-        <input type="text"
-               id="card-name"
-               placeholder="Anmol Thakur"
-               class=" border border-neutral-400/40 h-9 w-full min-w-0 text-sm font-norma focus:outline-0 indent-1 hidden md:block focus:outline-neutral-300 px-3 py-1 rounded-lg placeholder:text-sm dark:bg-[#1C1C1C] dark:placeholder:text-neutral-400 placeholder:font-normal"/>
+      <div data-slot="field-separator" data-content="false"
+           class="relative border border-neutral-400/20">
       </div>
 
-      <div class="grid grid-cols-3 gap-4">
-        <div class="flex flex-col flex-1 col-span-2 gap-3">
-          <div class="flex flex-col flex-1 gap-3">
-            <label for="card-number" class="text-[14px] font-semibold">Card Number</label>
-            <input type="text"
-                   id="card-number"
-                   placeholder="1234 5678 9012 3456"
-                   class=" border border-neutral-400/40 h-9 w-full min-w-0 text-sm font-norma focus:outline-0 indent-1 hidden md:block focus:outline-neutral-300 px-3 py-1 rounded-lg placeholder:text-sm dark:bg-[#1C1C1C] dark:placeholder:text-neutral-100 placeholder:font-normal"/>
-          </div>
-          <p class="text-sm text-neutral-500/90 dark:text-neutral-400 leading-normal font-normal">Enter your 16-digit number.</p>
+      <div class="flex flex-col gap-5 w-full p-6">
+        <div class="flex flex-col">
+          <p class="font-semibold">Billing address</p>
+          <p class="text-sm text-wrap font-normal leading-normal mt-1 text-neutral-500/90 dark:text-neutral-400">The
+            billing address associated wih your payment method</p>
         </div>
 
-        <div class="col-span-1 flex flex-col gap-3">
-          <label for="card-cvv" class="text-[14px] font-semibold">CVV</label>
-          <input type="text"
-                 id="card-cvv"
-                 placeholder="123"
-                 class="border border-neutral-400/40 h-9 w-full min-w-0 text-sm font-normal focus:outline-0 indent-1 hidden md:block focus:outline-neutral-300 px-3 py-1 rounded-lg placeholder:text-sm dark:bg-[#1C1C1C] dark:placeholder:text-neutral-100 placeholder:font-normal"/>
+        <div class="flex flex-row items-center gap-6">
+          <input type="checkbox" class="size-4">
+          <p class="font-semibold text-sm">Same as shipping address</p>
         </div>
       </div>
+
+      <div data-slot="field-separator" data-content="false"
+           class="relative border border-neutral-400/20">
+      </div>
+
+
+      <div class="flex flex-col gap-6 w-full p-6">
+
+        <div class="flex flex-col gap-3 w-full">
+          <p class="font-semibold text-sm">Comments</p>
+          <textarea
+            rows="3"
+            cols="3"
+            placeholder="Add any additional comments"
+            class="max-w-full min-w-full min-h-22 px-3 py-2
+         text-base font-normal leading-normal
+         border border-neutral-400/40 rounded-lg
+         placeholder:text-sm placeholder:font-normal
+         focus:outline-gray-500
+         resize
+         dark:bg-[#1C1C1C]
+         dark:placeholder:text-neutral-400">
+</textarea>
+
+        </div>
+
+        <div class="flex flex-row gap-5">
+          <button
+            class="rounded-lg border bg-neutral-900 text-neutral-200 border-neutral-400/40 text-sm px-4 py-2 dark:bg-neutral-100 dark:hover:bg-neutral-200 transition-all duration-300 dark:text-neutral-800 font-semibold cursor-pointer">
+            Submit
+          </button>
+          <button
+            class="rounded-lg border font-semibold border-neutral-400/40 text-sm px-4 py-2  cursor-pointer dark:bg-[#1C1C1C] dark:hover:bg-neutral-800">
+            Cancel
+          </button>
+        </div>
+      </div>
+
     </div>
+
 
   </form>
 </section>
