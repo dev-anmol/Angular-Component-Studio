@@ -1,3 +1,42 @@
-<section class="geist-product px-8">
-  <p>form works</p>
+<section class="geist-product px-8 antialiased  max-w-sm ">
+  <form action="">
+    <div class="w-full flex flex-col gap-6 rounded-lg border border-neutral-400/40 p-6">
+      <fieldset>
+        <legend class="text-md font-semibold">Payment Method</legend>
+        <p class="text-sm font-normal leading-normal mt-1 text-neutral-500/90 dark:text-neutral-400">All transactions are secure and
+          encrypted</p>
+      </fieldset>
+
+
+      <div class="flex flex-col gap-3">
+        <label for="card-name" class="text-[14px] font-semibold">Name on Card</label>
+        <input type="text"
+               id="card-name"
+               placeholder="Anmol Thakur"
+               class=" border border-neutral-400/40 h-9 w-full min-w-0 text-sm font-norma focus:outline-0 indent-1 hidden md:block focus:outline-neutral-300 px-3 py-1 rounded-lg placeholder:text-sm dark:bg-[#1C1C1C] dark:placeholder:text-neutral-400 placeholder:font-normal"/>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4">
+        <div class="flex flex-col flex-1 col-span-2 gap-3">
+          <div class="flex flex-col flex-1 gap-3">
+            <label for="card-number" class="text-[14px] font-semibold">Card Number</label>
+            <input type="text"
+                   id="card-number"
+                   placeholder="1234 5678 9012 3456"
+                   class=" border border-neutral-400/40 h-9 w-full min-w-0 text-sm font-norma focus:outline-0 indent-1 hidden md:block focus:outline-neutral-300 px-3 py-1 rounded-lg placeholder:text-sm dark:bg-[#1C1C1C] dark:placeholder:text-neutral-100 placeholder:font-normal"/>
+          </div>
+          <p class="text-sm text-neutral-500/90 dark:text-neutral-400 leading-normal font-normal">Enter your 16-digit number.</p>
+        </div>
+
+        <div class="col-span-1 flex flex-col gap-3">
+          <label for="card-cvv" class="text-[14px] font-semibold">CVV</label>
+          <input type="text"
+                 id="card-cvv"
+                 placeholder="123"
+                 class="border border-neutral-400/40 h-9 w-full min-w-0 text-sm font-normal focus:outline-0 indent-1 hidden md:block focus:outline-neutral-300 px-3 py-1 rounded-lg placeholder:text-sm dark:bg-[#1C1C1C] dark:placeholder:text-neutral-100 placeholder:font-normal"/>
+        </div>
+      </div>
+    </div>
+
+  </form>
 </section>
