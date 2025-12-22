@@ -14,11 +14,19 @@ export class ThemeToggle {
 
   private injector = inject(Injector);
 
-  mode = signal<Theme>('light');
+  mode = signal<Theme>(
+    'dark'
+  );
 
   constructor() {
     afterNextRender(() => {
       runInInjectionContext(this.injector, () => {
+
+        const saved = localStorage.getItem('theme') as Theme | null;
+        if (saved) {
+          this.mode.set(saved);
+        }
+
         effect(() => {
           const isDark = this.mode() === 'dark';
           document.documentElement.classList.toggle('dark', isDark);

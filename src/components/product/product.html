@@ -1,7 +1,7 @@
-<section class="mt-18 flex-1 space-y-6 min-h-screen px-8">
+<section class="mt-18 flex-1 space-y-6 px-8">
   <!--  select features - examples, Dashboard, Tasks and Auth -->
   <div class="geist-hero hidden md:flex md:items-center md:justify-between p-4">
-    <div class="flex-1 space-x-10 text-sm">
+    <div class="flex-1 space-x-2 md:space-x-8 text-md">
       <a href="/">Examples</a>
       <a href="/">Dashboard</a>
       <a href="/">Tasks</a>
@@ -16,6 +16,24 @@
       </button>
     </div>
   </div>
+
+
+  <!--  Products i.e components showcase-->
+  <div class=" overflow-hidden min-md:grid min-md:grid-cols-3 min-lg:grid-cols-4 hidden gap-8">
+    <app-form></app-form>
+    <div class="col-span-1 flex flex-col gap-4">
+      <app-pricing-card></app-pricing-card>
+      <app-preferences></app-preferences>
+      <app-summary-card></app-summary-card>
+      <app-notification></app-notification>
+    </div>
+
+    <div class="col-span-1 flex flex-col gap-4">
+      <app-profile-card></app-profile-card>
+      <app-activity-feed></app-activity-feed>
+    </div>
+  </div>
+
 
   <div class="relative md:hidden overflow-hidden rounded-xl">
     <div class="relative">

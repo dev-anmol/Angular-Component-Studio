@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-pricing-card',
   imports: [],
   templateUrl: './pricing-card.html',
-  styleUrl: './pricing-card.css',
 })
 export class PricingCard {
 

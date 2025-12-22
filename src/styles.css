@@ -3,6 +3,10 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+* {
+  box-sizing: border-box;
+}
+
 .geist {
   font-family: "Geist", sans-serif;
   font-optical-sizing: auto;
@@ -21,6 +25,12 @@
   font-family: "Geist", sans-serif;
   font-optical-sizing: auto;
   /*font-weight: 500;*/
+  font-style: normal;
+}
+
+.geist-product {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
   font-style: normal;
 }
 
