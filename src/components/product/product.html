@@ -19,7 +19,10 @@
 
 
   <!--  Products i.e components showcase-->
-  <div class="overflow-hidden hidden md:grid md:grid-cols-2 items-stretch lg:grid-cols-3 xl:grid-cols-4 gap-6">
+  <div class="hidden md:grid gap-6 items-stretch
+            md:grid-cols-2
+            lg:grid-cols-3
+            xl:grid-cols-4">
     <div>
       <app-form></app-form>
     </div>
@@ -30,7 +33,7 @@
       <app-notification></app-notification>
     </div>
 
-    <div class="flex flex-col w-full gap-4">
+    <div class="hidden lg:flex flex-col gap-4">
       <app-profile-card></app-profile-card>
       <app-activity-feed></app-activity-feed>
       <app-row-card></app-row-card>
@@ -39,7 +42,7 @@
       <app-highlight-card></app-highlight-card>
     </div>
 
-    <div class="flex-col gap-4 hidden xl:flex">
+    <div class="hidden xl:flex flex-col gap-4">
       <app-infobanner-card></app-infobanner-card>
       <app-toggle-card></app-toggle-card>
       <app-onboarding-card></app-onboarding-card>
