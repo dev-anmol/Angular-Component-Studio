@@ -20,7 +20,9 @@
 
   <!--  Products i.e components showcase-->
   <div class=" overflow-hidden min-md:grid min-md:grid-cols-3 min-lg:grid-cols-4 hidden gap-8">
-    <app-form></app-form>
+    <div class="col-span-1">
+      <app-form></app-form>
+    </div>
     <div class="col-span-1 flex flex-col gap-4">
       <app-pricing-card></app-pricing-card>
       <app-preferences></app-preferences>
@@ -31,6 +33,20 @@
     <div class="col-span-1 flex flex-col gap-4">
       <app-profile-card></app-profile-card>
       <app-activity-feed></app-activity-feed>
+<!--      <app-command-palette></app-command-palette>-->
+      <app-row-card></app-row-card>
+      <app-upload-card></app-upload-card>
+      <app-status-card></app-status-card>
+      <app-highlight-card></app-highlight-card>
+    </div>
+
+    <div class="col-span-1 flex flex-col gap-4">
+      <app-infobanner-card></app-infobanner-card>
+      <app-toggle-card></app-toggle-card>
+      <app-onboarding-card></app-onboarding-card>
+      <app-role-card></app-role-card>
+      <app-notification-card></app-notification-card>
+      <app-metadata-card></app-metadata-card>
     </div>
   </div>
 
