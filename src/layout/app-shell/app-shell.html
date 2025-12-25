@@ -1,1 +1,39 @@
-<router-outlet></router-outlet>
+<div class="min-h-screen bg-white dark:bg-[#0A0A0A]">
+
+  <!-- HEADER -->
+  <header
+    class="sticky top-0 z-20 border-b border-neutral-400/40
+           bg-white dark:bg-[#0A0A0A]">
+    <app-header></app-header>
+  </header>
+
+  <!-- BODY -->
+  <div class="flex">
+
+    <!-- SIDEBAR -->
+    <aside
+      class="hidden lg:block w-64 shrink-0
+             border-r border-neutral-400/40
+             sticky top-14 h-[calc(100vh-56px)]
+             bg-white dark:bg-[#0A0A0A]">
+      <app-sidebar></app-sidebar>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main
+      class="flex-1 px-6 md:px-10 py-10
+             max-w-3xl mx-auto">
+      <router-outlet></router-outlet>
+    </main>
+
+    <!-- TOC -->
+    <aside
+      class="hidden xl:block w-64 shrink-0
+             border-l border-neutral-400/40
+             sticky top-14 h-[calc(100vh-56px)]
+             px-6 py-10 text-sm">
+      <app-toc></app-toc>
+    </aside>
+
+  </div>
+</div>
