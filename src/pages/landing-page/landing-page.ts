@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Header} from '../../layout/header/header';
-import {Hero} from '../../layout/hero/hero'
-import {Product} from '../../layout/product/product';
+import {Hero} from './hero/hero'
+import {Product} from './product/product';
 import {Footer} from '../../layout/footer/footer';
 
 @Component({
