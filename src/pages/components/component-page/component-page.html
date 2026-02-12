@@ -1,3 +1,50 @@
-<section class="min-h-screen">
-  component-page
+<section>
+  <!-- Page Header -->
+  <div class="mb-10">
+    <h1 class="text-4xl font-bold text-neutral-900 dark:text-white mb-4">
+      Component Library
+    </h1>
+    <p class="text-lg text-neutral-600 dark:text-neutral-400">
+      Explore our collection of modern, reusable Angular components built with signals and the latest Angular 21
+      patterns.
+    </p>
+  </div>
+
+  <!-- Search (Optional for v1, keeping it simple) -->
+  <div class="mb-8">
+    <input type="text" placeholder="Search components..."
+      class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      (input)="searchQuery.set($any($event.target).value)" [value]="searchQuery()" />
+  </div>
+
+  <!-- Components Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    @for (component of filteredComponents(); track component.slug) {
+    <a [routerLink]="['/docs/components', component.slug]"
+      class="group block p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/50 hover:border-neutral-300 dark:hover:border-neutral-700 hover:shadow-lg transition-all">
+      <div class="flex items-start justify-between mb-3">
+        <h3
+          class="text-xl font-semibold text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+          {{ component.title }}
+        </h3>
+        <span
+          class="text-xs px-2 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400">
+          {{ component.category }}
+        </span>
+      </div>
+      <p class="text-neutral-600 dark:text-neutral-400 text-sm">
+        {{ component.description }}
+      </p>
+    </a>
+    } @empty {
+    <div class="col-span-2 text-center py-12 text-neutral-500 dark:text-neutral-400">
+      No components found matching your search.
+    </div>
+    }
+  </div>
+
+  <!-- Component Count -->
+  <div class="mt-8 text-sm text-neutral-500 dark:text-neutral-400 text-center">
+    Showing {{ filteredComponents().length }} of {{ allComponents().length }} components
+  </div>
 </section>

@@ -40,6 +40,14 @@ export const routes: Routes = [
           import('../pages/components/component-detail/component-detail')
             .then(m => m.ComponentDetail),
       },
+
+      // Installation
+      {
+        path: 'installation',
+        loadComponent: () =>
+          import('../pages/installation/installation')
+            .then(m => m.Installation),
+      },
     ],
   },
 ];

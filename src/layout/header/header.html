@@ -4,34 +4,37 @@
     <div class="flex flex-row space-x-2 items-center">
 
       <div class="hidden lg:flex">
-        <svg class="h-4 w-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="
-        M32 10
-        L10 54
-        H20
-        L25 44
-        H39
-        L44 54
-        H54
-        Z
-
-        M29 34
-        L32 28
-        L35 34
-        Z
-      " fill="currentColor" />
-        </svg>
+        <a routerLink="/" class="cursor-pointer">
+          <svg class="h-4 w-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="
+          M32 10
+          L10 54
+          H20
+          L25 44
+          H39
+          L44 54
+          H54
+          Z
+  
+          M29 34
+          L32 28
+          L35 34
+          Z
+        " fill="currentColor" />
+          </svg>
+        </a>
       </div>
 
       <div class="hidden lg:flex lg:flex-ro w lg:items-center lg:gap-1 text-sm font-normal ">
 
-        <a href="#" class="font-medium hover:bg-[#F5F5F5] dark:hover:bg-[#252525] rounded-lg px-4 py-[4px]">Docs</a>
-        <a href="#"
+        <a routerLink="/docs"
+          class="font-medium hover:bg-[#F5F5F5] dark:hover:bg-[#252525] rounded-lg px-4 py-[4px]">Docs</a>
+        <a routerLink="/docs/components"
           class="font-medium hover:bg-[#F5F5F5] dark:hover:bg-[#252525] rounded-lg px-4 py-[4px]">Components</a>
-        <a href="#" class="font-medium hover:bg-[#F5F5F5] dark:hover:bg-[#252525] rounded-lg px-4 py-[4px]">Blocks</a>
-        <a href="#" class="font-medium hover:bg-[#F5F5F5] dark:hover:bg-[#252525] rounded-lg px-4 py-[4px]">Charts</a>
-        <a href="#" class="font-medium hover:bg-[#F5F5F5] dark:hover:bg-[#252525] rounded-lg px-4 py-[4px]">About</a>
+        <a routerLink="/docs/installation"
+          class="font-medium hover:bg-[#F5F5F5] dark:hover:bg-[#252525] rounded-lg px-4 py-[4px]">Installation</a>
       </div>
+
 
       <div class="lg:hidden flex gap-4 items-center">
         <i-lucide [img]="MenuIcon" [size]="16" strokeWidth="2" class="my-icon cursor-pointer"></i-lucide>

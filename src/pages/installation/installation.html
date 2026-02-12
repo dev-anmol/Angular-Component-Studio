@@ -1,0 +1,158 @@
+<section>
+    <!-- Page Header -->
+    <div class="mb-10">
+        <h1 class="text-4xl font-bold text-neutral-900 dark:text-white mb-4">
+            Installation
+        </h1>
+        <p class="text-lg text-neutral-600 dark:text-neutral-400">
+            Get started with Angular Component Studio by following these simple installation steps.
+        </p>
+    </div>
+
+    <!-- Prerequisites -->
+    <section id="prerequisites" class="mb-12">
+        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-white mb-4">
+            Prerequisites
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+            Before you begin, ensure you have the following installed:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-neutral-600 dark:text-neutral-400">
+            <li>Node.js 18.x or higher</li>
+            <li>npm 9.x or higher (or yarn/pnpm)</li>
+            <li>Angular CLI 21.x</li>
+        </ul>
+    </section>
+
+    <!-- Installation Steps -->
+    <section id="steps" class="mb-12">
+        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-white mb-4">
+            Installation Steps
+        </h2>
+
+        <!-- Step 1 -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-3">
+                1. Install Angular CLI
+            </h3>
+            <p class="text-neutral-600 dark:text-neutral-400 mb-3">
+                If you don't have Angular CLI installed globally, install it first:
+            </p>
+            <div class="bg-neutral-900 dark:bg-neutral-950 rounded-lg p-6 overflow-x-auto">
+                <pre class="text-sm text-neutral-100"><code>npm install -g @angular/cli@21</code></pre>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-3">
+                2. Create a New Angular Project
+            </h3>
+            <p class="text-neutral-600 dark:text-neutral-400 mb-3">
+                Create a new Angular 21 project with SSR enabled:
+            </p>
+            <div class="bg-neutral-900 dark:bg-neutral-950 rounded-lg p-6 overflow-x-auto">
+                <pre class="text-sm text-neutral-100"><code>ng new my-app --ssr
+cd my-app</code></pre>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-3">
+                3. Install Tailwind CSS
+            </h3>
+            <p class="text-neutral-600 dark:text-neutral-400 mb-3">
+                Install and configure Tailwind CSS:
+            </p>
+            <div class="bg-neutral-900 dark:bg-neutral-950 rounded-lg p-6 overflow-x-auto mb-3">
+                <pre class="text-sm text-neutral-100"><code>npm install -D tailwindcss postcss @tailwindcss/postcss
+npx tailwindcss init</code></pre>
+            </div>
+            <p class="text-neutral-600 dark:text-neutral-400 mb-3">
+                Configure your <code
+                    class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded text-sm">tailwind.config.js</code>:
+            </p>
+            <div class="bg-neutral-900 dark:bg-neutral-950 rounded-lg p-6 overflow-x-auto">
+                <pre class="text-sm text-neutral-100"><code>export default {{ '{' }}
+  darkMode: 'class',
+  content: [
+    "./src/**/*.{{ '{' }}html,ts{{ '}' }}",
+  ],
+  theme: {{ '{' }}
+    extend: {{ '{' }}{{ '}' }},
+  {{ '}' }},
+  plugins: [],
+{{ '}' }}</code></pre>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-3">
+                4. Install Component Library (Future)
+            </h3>
+            <p class="text-neutral-600 dark:text-neutral-400 mb-3">
+                Once published to npm, you'll be able to install the component library:
+            </p>
+            <div class="bg-neutral-900 dark:bg-neutral-950 rounded-lg p-6 overflow-x-auto">
+                <pre class="text-sm text-neutral-100"><code>npm install @angular-studio/ui</code></pre>
+            </div>
+            <div class="mt-4 p-4 bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900 rounded-lg">
+                <p class="text-sm text-blue-800 dark:text-blue-200">
+                    <strong>Note:</strong> The component library is currently in development and will be published to
+                    npm soon.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage -->
+    <section id="usage" class="mb-12">
+        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-white mb-4">
+            Usage
+        </h2>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4">
+            Import components in your Angular modules or standalone components:
+        </p>
+        <div class="bg-neutral-900 dark:bg-neutral-950 rounded-lg p-6 overflow-x-auto">
+            <pre class="text-sm text-neutral-100"><code>import {{ '{' }} Component {{ '}' }} from '@angular/core';
+import {{ '{' }} Form {{ '}' }} from '@angular-studio/ui';
+
+@Component({{ '{' }}
+  selector: 'app-root',
+  standalone: true,
+  imports: [Form],
+  template: `&lt;app-form&gt;&lt;/app-form&gt;`
+{{ '}' }})
+export class AppComponent {{ '{' }}{{ '}' }}</code></pre>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section id="next-steps" class="mb-12">
+        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-white mb-4">
+            Next Steps
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a routerLink="/docs/components"
+                class="p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 hover:shadow-lg transition-all">
+                <h3 class="text-lg font-semibold text-neutral-900 dark:text-white mb-2">
+                    Browse Components
+                </h3>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                    Explore our collection of modern Angular components
+                </p>
+            </a>
+            <a routerLink="/docs"
+                class="p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 hover:shadow-lg transition-all">
+                <h3 class="text-lg font-semibold text-neutral-900 dark:text-white mb-2">
+                    Read Documentation
+                </h3>
+                <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                    Learn about Angular 21 patterns and best practices
+                </p>
+            </a>
+        </div>
+    </section>
+</section>
