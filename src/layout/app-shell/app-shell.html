@@ -6,16 +6,17 @@
     <aside class="hidden lg:flex lg:flex-col w-64 shrink-0
              sticky top-14 self-start
              h-[calc(100vh-3.5rem)]
-             bg-white dark:bg-[#0A0A0A]">
+             bg-white dark:bg-[#0A0A0A]
+             overflow-hidden relative">
       <!-- Gradient separator on right -->
       <div
-        class="absolute right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-neutral-300 dark:via-neutral-700 to-transparent">
+        class="absolute right-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-neutral-300 dark:via-neutral-700 to-transparent z-10">
       </div>
       <app-sidebar></app-sidebar>
     </aside>
     <!-- MAIN CONTENT -->
     <main class="flex-1 px-6 md:px-10 py-10
-             max-w-3xl mx-auto min-w-0">
+             max-w-3xl mx-auto min-w-0 geist">
       <router-outlet></router-outlet>
     </main>
     <!-- TOC -->
