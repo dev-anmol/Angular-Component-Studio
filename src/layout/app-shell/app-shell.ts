@@ -7,7 +7,7 @@ import {Toc} from '../toc/toc';
 
 @Component({
   selector: 'app-app-shell',
-  imports: [RouterOutlet, Header, Footer, Sidebar, Toc],
+  imports: [RouterOutlet, Header, Sidebar, Toc],
   templateUrl: './app-shell.html',
 })
 export class AppShell {

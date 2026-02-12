@@ -1,10 +1,12 @@
 import {Component} from '@angular/core';
 import {ArrowRight, LucideAngularModule} from 'lucide-angular';
+import {RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
   selector: 'app-hero',
   imports: [
-    LucideAngularModule
+    LucideAngularModule,
+    RouterLink,
   ],
   templateUrl: './hero.html',
 })
