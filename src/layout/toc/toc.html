@@ -8,9 +8,9 @@
         @for (heading of headings(); track heading.id) {
         <a [attr.data-heading-id]="heading.id" (click)="scrollToHeading(heading.id)"
             [class.text-blue-600]="activeId() === heading.id" [class.dark:text-blue-400]="activeId() === heading.id"
-            [class.font-medium]="activeId() === heading.id" [class.border-l-2]="activeId() === heading.id"
-            [class.border-blue-600]="activeId() === heading.id" [class.dark:border-blue-400]="activeId() === heading.id"
-            [class.pl-3]="heading.level === 2" [class.pl-6]="heading.level === 3"
+            [class.font-semibold]="activeId() === heading.id" [class.border-blue-600]="activeId() === heading.id"
+            [class.dark:border-blue-400]="activeId() === heading.id" [class.pl-3]="heading.level === 2"
+            [class.pl-6]="heading.level === 3"
             class="block text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-all cursor-pointer py-1 border-l-2 border-transparent">
             {{ heading.text }}
         </a>
