@@ -36,6 +36,7 @@
       </div>
 
 
+      @if (isInDocsArea()) {
       <div class="lg:hidden flex gap-4 items-center cursor-pointer" (click)="toggleMobileMenu()">
         @if (mobileMenuOpen()) {
         <i-lucide [img]="XIcon" [size]="16" strokeWidth="2" class="my-icon"></i-lucide>
@@ -44,6 +45,32 @@
         }
         <p class="text-md">{{ mobileMenuOpen() ? 'Close' : 'Menu' }}</p>
       </div>
+      } @else {
+      <!-- Logo/Branding (Landing Page) -->
+      <a routerLink="/" class="lg:hidden flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-neutral-500 flex items-center justify-center">
+          <span class="text-white font-bold text-sm">AC</span>
+        </div>
+        <!-- <svg class="h-4 w-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="
+          M32 10
+          L10 54
+          H20
+          L25 44
+          H39
+          L44 54
+          H54
+          Z
+          
+          M29 34
+          L32 28
+          L35 34
+          Z
+          " fill="currentColor" />
+        </svg> -->
+
+      </a>
+      }
     </div>
 
 
