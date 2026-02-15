@@ -1,8 +1,13 @@
 <div class="min-h-screen bg-white dark:bg-[#0A0A0A]">
-  <app-header></app-header>
+  <app-header (mobileMenuToggle)="onMobileMenuToggle($event)"></app-header>
+
+  <!-- Mobile Drawer -->
+  <app-mobile-drawer [isOpen]="mobileMenuOpen()" (close)="closeMobileMenu()">
+  </app-mobile-drawer>
+
   <!-- BODY -->
   <div class="flex relative">
-    <!-- SIDEBAR -->
+    <!-- SIDEBAR (Desktop) -->
     <aside class="hidden lg:flex lg:flex-col w-64 shrink-0
          sticky top-14 self-start
          h-[calc(100vh-3.5rem)]

@@ -36,9 +36,13 @@
       </div>
 
 
-      <div class="lg:hidden flex gap-4 items-center">
-        <i-lucide [img]="MenuIcon" [size]="16" strokeWidth="2" class="my-icon cursor-pointer"></i-lucide>
-        <p class="text-md">Menu</p>
+      <div class="lg:hidden flex gap-4 items-center cursor-pointer" (click)="toggleMobileMenu()">
+        @if (mobileMenuOpen()) {
+        <i-lucide [img]="XIcon" [size]="16" strokeWidth="2" class="my-icon"></i-lucide>
+        } @else {
+        <i-lucide [img]="MenuIcon" [size]="16" strokeWidth="2" class="my-icon"></i-lucide>
+        }
+        <p class="text-md">{{ mobileMenuOpen() ? 'Close' : 'Menu' }}</p>
       </div>
     </div>
 
