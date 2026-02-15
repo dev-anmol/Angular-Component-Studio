@@ -6,6 +6,9 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(212 212 212) transparent;
 }
 
 .geist {
