@@ -1,23 +1,24 @@
-<div class="py-6 geist">
+<div class="py-6 geist sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto scrollbar-hide toc-container">
     <h3 class="text-xs font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-4 geist-header">
         On This Page
     </h3>
+
+    @if (headings().length > 0) {
     <nav class="space-y-2 text-sm geist-desc">
-        <a (click)="scrollToSection('overview')"
-            class="block text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors cursor-pointer">
-            Overview
+        @for (heading of headings(); track heading.id) {
+        <a [attr.data-heading-id]="heading.id" (click)="scrollToHeading(heading.id)"
+            [class.text-blue-600]="activeId() === heading.id" [class.dark:text-blue-400]="activeId() === heading.id"
+            [class.font-medium]="activeId() === heading.id" [class.border-l-2]="activeId() === heading.id"
+            [class.border-blue-600]="activeId() === heading.id" [class.dark:border-blue-400]="activeId() === heading.id"
+            [class.pl-3]="heading.level === 2" [class.pl-6]="heading.level === 3"
+            class="block text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-all cursor-pointer py-1 border-l-2 border-transparent">
+            {{ heading.text }}
         </a>
-        <a (click)="scrollToSection('installation')"
-            class="block text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors cursor-pointer">
-            Installation
-        </a>
-        <a (click)="scrollToSection('usage')"
-            class="block text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors cursor-pointer">
-            Usage
-        </a>
-        <a (click)="scrollToSection('props')"
-            class="block text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors cursor-pointer">
-            Props
-        </a>
+        }
     </nav>
+    } @else {
+    <p class="text-xs text-neutral-500 dark:text-neutral-600 italic">
+        No headings found
+    </p>
+    }
 </div>
