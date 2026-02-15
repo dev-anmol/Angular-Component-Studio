@@ -3,10 +3,11 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs/operators';
 import { getComponentBySlug, ComponentMeta } from '../../../data/components.registry';
+import { CodeBlock } from '../../../shared/code-block/code-block';
 
 @Component({
   selector: 'app-component-detail',
-  imports: [RouterLink],
+  imports: [RouterLink, CodeBlock],
   templateUrl: './component-detail.html',
 })
 export class ComponentDetail {

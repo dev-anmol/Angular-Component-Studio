@@ -44,22 +44,18 @@
 
     <!-- Installation Section -->
     <section id="installation" class="mb-12">
-        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-white mb-4">
+        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-white mb-4 geist-header">
             Installation
         </h2>
-        <div class="bg-neutral-900 dark:bg-neutral-950 rounded-lg p-6 overflow-x-auto">
-            <pre class="text-sm text-neutral-100"><code>{{ component()!.installation }}</code></pre>
-        </div>
+        <app-code-block [code]="component()!.installation" language="bash" />
     </section>
 
     <!-- Usage Section -->
     <section id="usage" class="mb-12">
-        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-white mb-4">
+        <h2 class="text-2xl font-semibold text-neutral-900 dark:text-white mb-4 geist-header">
             Usage
         </h2>
-        <div class="bg-neutral-900 dark:bg-neutral-950 rounded-lg p-6 overflow-x-auto">
-            <pre class="text-sm text-neutral-100"><code>{{ component()!.usage }}</code></pre>
-        </div>
+        <app-code-block [code]="component()!.usage" language="typescript" />
     </section>
 
     <!-- Props Section (if available) -->

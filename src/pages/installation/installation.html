@@ -38,9 +38,7 @@
             <p class="text-neutral-600 dark:text-neutral-400 mb-3">
                 If you don't have Angular CLI installed globally, install it first:
             </p>
-            <div class="bg-neutral-900 dark:bg-neutral-950 rounded-lg p-6 overflow-x-auto">
-                <pre class="text-sm text-neutral-100"><code>npm install -g @angular/cli@21</code></pre>
-            </div>
+            <app-code-block code="npm install -g @angular/cli@21" language="bash" />
         </div>
 
         <!-- Step 2 -->
@@ -65,26 +63,13 @@ cd my-app</code></pre>
             <p class="text-neutral-600 dark:text-neutral-400 mb-3">
                 Install and configure Tailwind CSS:
             </p>
-            <div class="bg-neutral-900 dark:bg-neutral-950 rounded-lg p-6 overflow-x-auto mb-3">
-                <pre class="text-sm text-neutral-100"><code>npm install -D tailwindcss postcss @tailwindcss/postcss
-npx tailwindcss init</code></pre>
-            </div>
+            <app-code-block code="npm install -D tailwindcss postcss @tailwindcss/postcss&#10;npx tailwindcss init"
+                language="bash" />
             <p class="text-neutral-600 dark:text-neutral-400 mb-3">
                 Configure your <code
                     class="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded text-sm">tailwind.config.js</code>:
             </p>
-            <div class="bg-neutral-900 dark:bg-neutral-950 rounded-lg p-6 overflow-x-auto">
-                <pre class="text-sm text-neutral-100"><code>export default {{ '{' }}
-  darkMode: 'class',
-  content: [
-    "./src/**/*.{{ '{' }}html,ts{{ '}' }}",
-  ],
-  theme: {{ '{' }}
-    extend: {{ '{' }}{{ '}' }},
-  {{ '}' }},
-  plugins: [],
-{{ '}' }}</code></pre>
-            </div>
+            <app-code-block [code]="tailwindConfig" language="javascript" />
         </div>
 
         <!-- Step 4 -->
@@ -95,9 +80,7 @@ npx tailwindcss init</code></pre>
             <p class="text-neutral-600 dark:text-neutral-400 mb-3">
                 Once published to npm, you'll be able to install the component library:
             </p>
-            <div class="bg-neutral-900 dark:bg-neutral-950 rounded-lg p-6 overflow-x-auto">
-                <pre class="text-sm text-neutral-100"><code>npm install @angular-studio/ui</code></pre>
-            </div>
+            <app-code-block code="npm install @angular-studio/ui" language="bash" />
             <div class="mt-4 p-4 bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900 rounded-lg">
                 <p class="text-sm text-blue-800 dark:text-blue-200">
                     <strong>Note:</strong> The component library is currently in development and will be published to
@@ -115,18 +98,7 @@ npx tailwindcss init</code></pre>
         <p class="text-neutral-600 dark:text-neutral-400 mb-4">
             Import components in your Angular modules or standalone components:
         </p>
-        <div class="bg-neutral-900 dark:bg-neutral-950 rounded-lg p-6 overflow-x-auto">
-            <pre class="text-sm text-neutral-100"><code>import {{ '{' }} Component {{ '}' }} from '@angular/core';
-import {{ '{' }} Form {{ '}' }} from '@angular-studio/ui';
-
-@Component({{ '{' }}
-  selector: 'app-root',
-  standalone: true,
-  imports: [Form],
-  template: `&lt;app-form&gt;&lt;/app-form&gt;`
-{{ '}' }})
-export class AppComponent {{ '{' }}{{ '}' }}</code></pre>
-        </div>
+        <app-code-block [code]="usageExample" language="typescript" />
     </section>
 
     <!-- Next Steps -->
